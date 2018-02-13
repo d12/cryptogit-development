@@ -81,3 +81,5 @@ A new block can be mined by following these steps:
 Step 5 can be done using `git commit` and `git reset` repeatedly. A faster alternative would be to replicate the hash calculation functionality of `git commit`.
 
 After a valid block has been mined, it can be pushed to a new branch on GitHub using `git push -u origin branch_name`. There is no guarentee that this block will be added to `master`, as another miner may have mined a block off of `master` first, which would make the newer block invalid as it's now based off of `master^`, not `master`.
+
+A service listens for push hooks on the repository and validates new blocks. It merges all blocks that pass all validation checks.
