@@ -2,7 +2,7 @@
 
 CryptoGit is a cryptocurrency that utilizes Bitcoin's proof of work system, but operates using Git as the blockchain backbone instead of a custom merkle tree structure like other popular cryptocurrencies. This Git-based blockchain is then centralized on GitHub.
 
-This shows that much of Bitcoin's complexity already has existing, well-understood parallels in other technologies. Utilizing these applications to power a new cryptocurrency enables the same functionality but with less complexity and a less steep learning curve for people looking to understand the workings of a simple cryptocurrency.
+This shows that much of Bitcoin's complexity already has existing, well-understood parallels in other technologies. Utilizing these applications to power a new cryptocurrency enables similar functionality¹ but with less complexity and a less steep learning curve for people looking to understand the workings of a simple cryptocurrency.
 
 ## The basics
 
@@ -83,3 +83,7 @@ Step 5 can be done using `git commit` and `git reset` repeatedly. A faster alter
 After a valid block has been mined, it can be pushed to a new branch on GitHub using `git push -u origin branch_name`. There is no guarentee that this block will be added to `master`, as another miner may have mined a block off of `master` first, which would make the newer block invalid as it's now based off of `master^`, not `master`.
 
 A service listens for push hooks on the repository and validates new blocks. It merges all blocks that pass all validation checks.
+
+## Notes
+
+¹ - The biggest issue with the CryptoGit variation on Bitcoin is that multiple single points of failiure exist, whereas with Bitcoin, none exist. It also only implements the simple functionality of Bitcoin, but that problem can be solved with more development.
