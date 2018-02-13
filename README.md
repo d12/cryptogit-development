@@ -7,6 +7,8 @@ CryptoGit is a cryptocurrency that uses Git as the blockchain backbone instead o
 
 ## How does it work?
 
+Note that this document is a brief summary of CryptoGit. A full protocol can be found [here](https://github.com/d12/cryptogit-development/blob/master/protocol.md)
+
 The blockchain is represented by a GitHub repository. To blocks are represented by commits to the master branch. If a valid commit is created branching off of master, it is auto-merged into master by a service listening for push hooks.
 
 A commit is valid if:
